@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+
+ $blue: #72d0eb;
+ $pink: #ffb3b3;
+ $pink-invert: #fff;
+ $family-serif: "Montserrat", "Lato", sans-serif;
+ $primary-invert: $pink-invert;
+ $family-primary: $family-serif;
+
+ .landing-title{
+    font-size: 128px;
+}
+
+.landing-subtitle{
+    font-size: 64px;
+}
+
+ @import "bulma";
