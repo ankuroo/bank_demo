@@ -13,20 +13,35 @@
  *= require_tree .
  *= require_self
  */
+@import 'bulma';
 
- $blue: #72d0eb;
- $pink: #ffb3b3;
- $pink-invert: #fff;
- $family-serif: "Montserrat", "Lato", sans-serif;
- $primary-invert: $pink-invert;
- $family-primary: $family-serif;
+$family-serif: "Montserrat",
+"Lato",
+sans-serif;
+$family-primary: $family-serif;
 
- .landing-title{
-    font-size: 128px;
+#page-container {
+    position: relative;
+    min-height: 100vh;
 }
 
-.landing-subtitle{
+#content-wrap {
+    padding-top: $navbar-height;
+    padding-bottom: $footer-padding;
+}
+
+.footer {
+    position: absolute;
+    background-color: $footer-background-color;
+    width: 100%;
+    height: $footer-padding;
+    padding: $footer-padding;
+}
+
+.landing-title {
+    font-size: 256px;
+}
+
+.landing-subtitle {
     font-size: 64px;
 }
-
- @import "bulma";

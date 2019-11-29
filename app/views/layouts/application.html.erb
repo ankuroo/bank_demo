@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>BankDemo</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title><%= t("app_title")%>: <%= t("app_desc") %></title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body class="is-white">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body class="is-white">
+  <div class="page-container">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= render 'partials/header' %>
-    <%= yield %>
-  </body>
+    <div id="content-wrap">
+      <%= yield %>
+    </div>
+  </div>
+  <footer class="footer" style="width: 100%">
+    <%= render 'partials/footer' %>
+  </footer>
+</body>
+
 </html>

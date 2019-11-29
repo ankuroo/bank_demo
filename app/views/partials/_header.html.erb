@@ -1,15 +1,38 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <div class="navbar-item">
-      <%= link_to "CSB", root_path, class:"button has-text-weight-bold is-size-3 is-italic is-primary is-inverted"%>
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <%= link_to "CSB", root_path, class:"has-text-weight-bold is-size-1 is-italic has-text-primary is-inverted"%>
+      </div>
+
+      <a role="button" class="navbar-burger burger" data-target="navbarActions" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
     </div>
-  </div>
-  <div class="navbar-end">
-    <div class="navbar-item">
-      <%= link_to "Sign In", root_path, class: "button is-black is-inverted" %>
-    </div>
-    <div class="navbar-item">
-      <%= link_to "Register", root_path, class: "button is-primary"%>
+
+    <div id="navbarActions" class="navbar-end navbar-menu">
+      <div class="navbar-item">
+        <%= link_to "Register", root_path, class: "button is-primary" %>
+      </div>
+      <div class="navbar-item">
+        <%= link_to "Sign In", root_path, class: "button is-black is-inverted"%>
+      </div>
     </div>
   </div>
 </nav>
+
+<script>
+  $(document).ready(function () {
+
+    // Check for click events on the navbar burger icon
+    $(".navbar-burger").click(function () {
+
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      $(".navbar-burger").toggleClass("is-active");
+      $(".navbar-menu").toggleClass("is-active");
+
+    });
+  });
+</script>
