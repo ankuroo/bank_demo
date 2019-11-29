@@ -41,6 +41,9 @@ gem 'bulma-rails', '~> 0.8.0'
 # Simple Forms
 gem 'simple_form', '~> 5.0', '>= 5.0.1'
 
+#Devise
+gem 'devise', '~> 4.7', '>= 4.7.1'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
