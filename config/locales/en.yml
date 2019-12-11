@@ -33,3 +33,21 @@ en:
   app_title: CSB
   app_desc: The completely legitimate fake bank.
 
+  static:
+    home:
+      title: CSB
+      disclaimer_message_html:
+                Please note that this is <strong>NOT</strong> a real bank and your money not transferrable
+                to or from accounts of other banks. <br>
+                CBS is not accountable for any false sense of wealth you may believe you have whilst using this site.
+                <br><br>
+                Any cards you have on this site, will not be delivered to you and there are no branches where they can
+                be picked up. This is because they <strong>DO NOT EXIST</strong>. <br>
+                Do NOT use the account details (Account No, Sort-Code or CVC) provided by CSB to make
+                any real-world purchases on any site outside of this one. These transactions will not go through. <br>
+                Do NOT list your CBS card details anywhere.
+
+  contact:
+    new:
+      title: Contact Us
+
