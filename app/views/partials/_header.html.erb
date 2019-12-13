@@ -13,6 +13,9 @@
     </div>
 
     <div id="navbarActions" class="navbar-end navbar-menu">
+      <div class="navbar-item">
+        <%= link_to "Contact Us", contact_path, class: "button is-black is-inverted"%>
+      </div>
       <% if !account_signed_in? %>
       <div class="navbar-item">
         <%= link_to "Sign In", new_account_session_path, class: "button is-black is-inverted"%>
@@ -23,7 +26,7 @@
 
       <% else %>
       <div class="navbar-item">
-        <%= link_to current_account.email, edit_account_registration_path, class: "button is-black is-inverted"%>
+        <%= link_to current_account.name, edit_account_registration_path, class: "button is-black is-inverted"%>
       </div>
       <div class="navbar-item">
         <%= link_to "Sign Out", destroy_account_session_path, method: :delete, class: "button is-primary" %>

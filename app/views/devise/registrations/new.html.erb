@@ -8,6 +8,31 @@
         <%= f.error_notification %>
 
         <div class="form-inputs">
+
+          <div class="field">
+            <div class="control">
+              <%= f.input :name,
+                            required: true,
+                            autofocus: true,
+                            wrapper: false,
+                            input_html: { autocomplete: "email", class: "input" }%>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="control">
+              <%= f.input :username,
+                            required: true,
+                            autofocus: true,
+                            wrapper: false,
+                            input_html: { autocomplete: "email", class: "input" }%>
+            </div>
+          </div>
+
+          <%= f.hidden_field :balance, :value => 500 %>
+          <%= f.hidden_field :account_no, :value => "52568421" %>
+          <%= f.hidden_field :sort_code, :value => "20-00-02" %>
+
           <div class="field">
             <div class="control">
               <%= f.input :email,
