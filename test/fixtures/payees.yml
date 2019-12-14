@@ -2,12 +2,12 @@
 
 one:
   account: one
-  name: MyString
-  account_no: MyString
-  sort_code: MyString
+  name: Cain Cavanagh
+  account_no: 94316015
+  sort_code: 12-05-84
 
-two:
+invalid_sortcode:
   account: two
-  name: MyString
-  account_no: MyString
-  sort_code: MyString
+  name: Jeremiah Badanbridge
+  account_no: 24159015
+  sort_code: 1-52-15

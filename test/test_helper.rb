@@ -20,4 +20,8 @@ class ActiveSupport::TestCase
     end
   end
 
+  def log_out
+    delete '/accounts/sign_out'
+  end
+
 end
