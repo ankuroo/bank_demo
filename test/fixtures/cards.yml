@@ -2,16 +2,24 @@
 
 one:
   account: one
-  card_no: MyString
-  expiry_date: 2019-12-13
-  cvv: MyString
-  pin: MyString
-  status: MyString
+  card_no: "5421598763215486"
+  expiry_date: 2022-12-13
+  cvv: "233"
+  pin: "4125"
+  status: true
 
-two:
-  account: two
-  card_no: MyString
-  expiry_date: 2019-12-13
-  cvv: MyString
-  pin: MyString
-  status: MyString
+invalid_cvv:
+  account: one
+  card_no: 1234598763215486
+  expiry_date: 2022-12-13
+  cvv: 95423
+  pin: 2511
+  status: true
+
+invalid_pin:
+    account: one
+    card_no: 5126315987615831
+    expiry_date: 2022-07-04
+    cvv: 921
+    pin: 153
+    status: true

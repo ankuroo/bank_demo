@@ -4,8 +4,19 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
+one:
+  email: "am02412@surrey.ac.uk"
+  encrypted_password: <%= Account.new.send(:password_digest, '123456')%>
+  name: Ankur Mahto
+  username: ankuroo
+  balance: 500.0
+  account_no: "12072000"
+  sort_code: "20-00-02"
+
 # column: value
 #
-two: {}
+two:
+  name: John Smith
+  username: jsmith
+  email: jsmith@anon.com
 # column: value
