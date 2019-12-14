@@ -44,8 +44,11 @@ gem 'mail_form', '~> 1.8'
 # Simple Forms
 gem 'simple_form', '~> 5.0', '>= 5.0.1'
 
-#Devise
+# Devise
 gem 'devise', '~> 4.7', '>= 4.7.1'
+
+# JQuery
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

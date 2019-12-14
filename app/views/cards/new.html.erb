@@ -1,0 +1,33 @@
+<div class="section">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-4">
+                <h1 class="is-size-2">New Card</h1>
+
+                <%= simple_form_for(@card) do |f| %>
+                <%= f.error_notification %>
+                <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+                <div class="form-inputs">
+
+                    <% if @last_card == nil %>
+                    <%= f.hidden_field :card_no, :value => 1754261234712861 %>
+                    <% else %>
+                    <%= f.hidden_field :card_no, :value => @last_card.card_no.to_i + 1 %>
+                    <% end %>
+                    <%= f.hidden_field :expiry_date, :value => Date.today+3.years %>
+                    <%= f.hidden_field :cvv, :value => rand(100..999) %>
+                    <%= f.input :pin, wrapper: false, input_html: {class: "input"} %>
+                    <%= f.hidden_field :status, :value => true %>
+                </div>
+
+                <div class="form-actions">
+                    <%= f.button :submit, class: "button is-primary" %>
+                </div>
+                <% end %>
+
+                <%= link_to 'Back', cards_path %>
+            </div>
+        </div>
+    </div>
+</div>

@@ -5,6 +5,12 @@
         <%= link_to "CSB", root_path, class:"has-text-weight-bold is-size-1 is-italic has-text-primary is-inverted"%>
       </div>
 
+      <% if account_signed_in? %>
+      <div class="navbar-item">
+        <%= link_to "Cards", cards_path, class: "button is-black is-inverted"%>
+      </div>
+      <% end %>
+
       <a role="button" class="navbar-burger burger" data-target="navbarActions" aria-label="menu" aria-expanded="false">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -36,17 +42,3 @@
     </div>
   </div>
 </nav>
-
-<script>
-  $(document).ready(function () {
-
-    // Check for click events on the navbar burger icon
-    $(".navbar-burger").click(function () {
-
-      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-      $(".navbar-burger").toggleClass("is-active");
-      $(".navbar-menu").toggleClass("is-active");
-
-    });
-  });
-</script>

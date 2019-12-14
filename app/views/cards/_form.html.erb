@@ -1,0 +1,17 @@
+<%= simple_form_for(@card) do |f| %>
+<%= f.error_notification %>
+<%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+<div class="form-inputs">
+  <%# <%= f.association :account %>
+  <%= f.hidden_field :card_no, :value => @last_card.card_no.to_i + 1 %>
+  <%= f.hidden_field :expiry_date, :value => Date.today+3.years %>
+  <%= f.hidden_field :cvv, :value => rand(100..999) %>
+  <%= f.input :pin %>
+  <%= f.hidden_field :status, :value => true %>
+</div>
+
+<div class="form-actions">
+  <%= f.button :submit %>
+</div>
+<% end %>

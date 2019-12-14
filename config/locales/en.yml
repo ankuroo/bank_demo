@@ -36,6 +36,19 @@ en:
   static:
     home:
       title: CSB
+      why_us_html: <p>CSB is a brand-new bank so why should you trust us over so many well-established banks.
+        </p><br>
+        <ol>
+            <li>We are a bank that will never lose your money. We have an infinity pool of money and so we can never
+                go bankrupt.</li>
+            <li>We offer great security. We follow a two-factor authentication system which uses a login system so
+                that your information and money is always secure.</li>
+            <li>We understand what people want, so we are building a system that requires no paperwork whatsoever. This
+                means less time will be spent on admins reading contracts and more on processing your requests.</li>
+            <li>We are completely online. We have no branches and no cards. Through this method, we operate at no cost,
+                which means we are dedicated to delivering the best service we can without running into any financial
+                issues.</li>
+        </ol>
       disclaimer_message_html:
                 Please note that this is <strong>NOT</strong> a real bank and your money not transferrable
                 to or from accounts of other banks. <br>
@@ -47,7 +60,7 @@ en:
                 any real-world purchases on any site outside of this one. These transactions will not go through. <br>
                 Do NOT list your CBS card details anywhere.
 
-  contact:
+  contacts:
     new:
       title: Contact Us
 

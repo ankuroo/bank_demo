@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  account: one
+  card_no: MyString
+  expiry_date: 2019-12-13
+  cvv: MyString
+  pin: MyString
+  status: MyString
+
+two:
+  account: two
+  card_no: MyString
+  expiry_date: 2019-12-13
+  cvv: MyString
+  pin: MyString
+  status: MyString

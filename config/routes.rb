@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  resources :cards do
+    member do
+      post :cancel
+    end
+  end
+
+
   devise_for :accounts, :controllers => { registrations: 'registrations' }
 
 
