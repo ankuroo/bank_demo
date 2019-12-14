@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_13_044259) do
+ActiveRecord::Schema.define(version: 2019_12_14_165830) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -39,6 +39,16 @@ ActiveRecord::Schema.define(version: 2019_12_13_044259) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["account_id"], name: "index_cards_on_account_id"
+  end
+
+  create_table "payees", force: :cascade do |t|
+    t.integer "account_id"
+    t.string "name"
+    t.string "account_no"
+    t.string "sort_code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["account_id"], name: "index_payees_on_account_id"
   end
 
 end

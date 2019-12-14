@@ -1,0 +1,15 @@
+<%# Page to edit payee information %>
+<div class="section">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-4">
+                <h1 class="is-size-2">Editing Payee</h1>
+                <%# Renders out form partial %>
+                <%= render 'form', payee: @payee %>
+
+                <%= link_to 'Show', @payee %> |
+                <%= link_to 'Back', payees_path %>
+            </div>
+        </div>
+    </div>
+</div>

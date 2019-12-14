@@ -1,6 +1,8 @@
 # This page routes controller actions to paths
 Rails.application.routes.draw do
 
+  # Creates paths for all actions in payee controller
+  resources :payees
   # Creates paths for all resources in card controller
   resources :cards do
     member do

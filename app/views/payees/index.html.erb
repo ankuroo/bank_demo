@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+<div class="section">
+  <div class="container">
+
+    <div class="level">
+      <div class="level-left">
+        <h1 class="is-size-1">Payees</h1>
+      </div>
+      <div class="level-right">
+        <%# Button to allow card creation %>
+        <%= link_to 'New Card', new_payee_path, class: "button is-primary is-outlined" %>
+      </div>
+    </div>
+
+    <%# Checks if payee count is 0. If 0, prints a message, else outputs all cards. %>
+    <% if @payees.count == 0%>
+    <p> You do not have any payees. Please create one in order to make transactions using the 'New Card' button at the
+      top right corner.</p>
+    <% else %>
+    <% @payees.each do |payee| %>
+
+    <div class="box">
+      <div class="content">
+        <div class="level">
+          <div class="level-item">
+            <div class="content">
+              <p class="is-size-6"><strong><%= payee.name %></strong></p>
+            </div>
+          </div>
+          <div class="level-item">
+            <div class="content">
+              <p class="is-size-6">Account no.</p>
+              <%= payee.account_no %>
+            </div>
+          </div>
+          <div class="level-item">
+            <div class="content">
+              <p class="is-size-6">Sort Code</p>
+              <%= payee.sort_code%>
+            </div>
+          </div>
+          <div class="level-right">
+            <div class="content">
+              <%= link_to "Edit", edit_payee_path(payee), class: "button is-primary is-inverted"%>
+            </div>
+          </div>
+          <div class="level-right">
+            <div class="content">
+              <%= link_to 'Remove', payee, method: :delete, class: "button is-danger", data: { confirm: 'Are you sure you want to remove this payee?'}%>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+    <br>
+  </div>
+</div>

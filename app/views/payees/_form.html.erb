@@ -1,0 +1,33 @@
+<%# Partial - Form to create and edit payees %>
+<%= simple_form_for(@payee) do |f| %>
+<%= f.error_notification %>
+<%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+<ul>
+  <% @payee.errors.full_messages.each do |message| %>
+  <li><%= message %></li>
+  <% end %>
+</ul>
+
+<div class="form-inputs">
+  <div class="field">
+    <div class="control">
+      <%= f.input :name, wrapper: false, input_html: {class: "input"} %>
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <%= f.input :account_no, wrapper: false, input_html: {class: "input"} %>
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <%= f.input :sort_code, wrapper: false, input_html: {class: "input"} %>
+    </div>
+  </div>
+</div>
+
+<div class="form-actions">
+  <%= f.button :submit, class: "button is-primary" %>
+</div>
+<% end %>
