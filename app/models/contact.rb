@@ -1,10 +1,12 @@
+# Model for the content of the contact form
 class Contact < MailForm::Base
+  # Attributes with validation
+  # Name, email and message must exist, with an email being of a certain format.
   attribute :name,      :validate => true
   attribute :email,     :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
   attribute :message,   :validate => true
 
-  # Declare the e-mail headers. It accepts anything the mail method
-  # in ActionMailer accepts.
+  # Creates a default header for emails
   def headers
     {
       :subject => "Contact",

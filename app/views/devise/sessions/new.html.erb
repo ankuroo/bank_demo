@@ -1,3 +1,4 @@
+<%# Page to create a session %>
 <section class="section">
   <div class="container">
     <div class="columns is-centered">
@@ -8,11 +9,11 @@
         <div class="form-inputs">
           <div class="field">
             <div class="control">
-              <%= f.input :email,
+              <%= f.input :username,
                     required: false,
                     wrapper: false,
                     autofocus: true,
-                    input_html: { autocomplete: "email", class: "input" } %>
+                    input_html: { autocomplete: "username", class: "input" } %>
             </div>
           </div>
 

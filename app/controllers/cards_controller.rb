@@ -1,4 +1,6 @@
 class CardsController < ApplicationController
+  # Before actions run before any other process in an action for selected actions
+  # DRYing up code
   before_action :set_card, only: [:show, :edit, :update, :destroy, :cancel]
   before_action :authenticate_account!
 
@@ -74,16 +76,17 @@ class CardsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    # DRY - Code to set card up for given pages.
     def set_card
       @card = Card.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    # Parameters for card creation. User only has control of pin.
     def card_params
       params.require(:card).permit(:account_id, :card_no, :expiry_date, :cvv, :pin, :status)
     end
 
+    # Parameters to only modify pin number. This prevents the user from being able to modify any other information
     def pin_params
       params.require(:card).permit(:pin)
     end

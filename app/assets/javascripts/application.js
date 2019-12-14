@@ -16,6 +16,11 @@
 //= require jquery
 //= require_tree .
 
+
+// JQuery
+// =======================
+
+// This function is used to get the menu to expand on smaller screens
 $(document).ready(function () {
 
     // Check for click events on the navbar burger icon

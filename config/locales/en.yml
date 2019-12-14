@@ -32,7 +32,8 @@
 en:
   app_title: CSB
   app_desc: The completely legitimate fake bank.
-
+  
+  # Holds all text for static pages.
   static:
     home:
       title: CSB
@@ -60,6 +61,7 @@ en:
                 any real-world purchases on any site outside of this one. These transactions will not go through. <br>
                 Do NOT list your CBS card details anywhere.
 
+  # Holds text for contact page
   contacts:
     new:
       title: Contact Us

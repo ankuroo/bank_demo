@@ -1,8 +1,10 @@
+<%# Page to update account information %>
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
 <%= f.error_notification %>
 
+<%# Form to edit account information %>
 <div class="form-inputs">
   <%= f.input :name, required: true, autofocus: true %>
   <%= f.input :email, required: true, autofocus: true %>
@@ -31,6 +33,7 @@
 
 <h3>Cancel my account</h3>
 
+<%# Option to remove account %>
 <p>Unhappy?
   <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
 </p>

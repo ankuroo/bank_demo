@@ -8,14 +8,18 @@
         <h1 class="is-size-1">Cards</h1>
       </div>
       <div class="level-right">
+        <%# Button to allow card creation %>
         <%= link_to 'New Card', new_card_path, class: "button is-primary is-outlined" %>
       </div>
     </div>
 
+    <%# Checks if card count is 0. If 0, prints a message, else outputs all cards. %>
     <% if @cards.count == 0%>
     <p> You do not have any cards. Please request one using the 'New Card' button at the top right corner.</p>
     <% else %>
     <% @cards.each do |card| %>
+
+    <%# Displays all cards in individual boxes with actions %>
 
     <div class="box">
       <div class="content">
@@ -53,6 +57,7 @@
               <% end %>
             </div>
           </div>
+          <%# Checks if card has been terminated. If not terminated, gives option to change pin and cancel card %>
           <% if card.status %>
           <div class="level-right">
             <div class="content" class="is-text-primary">

@@ -1,15 +1,19 @@
+<%# The page for creating a new bank card. Creating a table entry %>
 <div class="section">
     <div class="container">
         <div class="columns is-centered">
             <div class="column is-4">
                 <h1 class="is-size-2">New Card</h1>
 
+                <%# Form for user input. %>
                 <%= simple_form_for(@card) do |f| %>
                 <%= f.error_notification %>
                 <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
                 <div class="form-inputs">
+                    <%# Given multiple hidden inputs, prevents user from entering their own data %>
 
+                    <%# Checks if this is the first card in the list. If yes, gives a predetermined card no. otherwise increments %>
                     <% if @last_card == nil %>
                     <%= f.hidden_field :card_no, :value => 1754261234712861 %>
                     <% else %>
@@ -17,11 +21,13 @@
                     <% end %>
                     <%= f.hidden_field :expiry_date, :value => Date.today+3.years %>
                     <%= f.hidden_field :cvv, :value => rand(100..999) %>
+                    <%# Only input open to user. The user can choose their own pin %>
                     <%= f.input :pin, wrapper: false, input_html: {class: "input"} %>
                     <%= f.hidden_field :status, :value => true %>
                 </div>
 
                 <div class="form-actions">
+                    <%# Calls create action and creates card entry in table, if validation passes %>
                     <%= f.button :submit, class: "button is-primary" %>
                 </div>
                 <% end %>
