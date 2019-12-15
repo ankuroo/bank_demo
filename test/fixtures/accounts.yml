@@ -15,8 +15,12 @@ one:
 
 # column: value
 #
-two:
+invalid_email:
   name: John Smith
+  encrypted_password: <%= Account.new.send(:password_digest, '123456')%>
   username: jsmith
-  email: jsmith@anon.com
+  email: jsmith
+  balance: 500.00
+  account_no: 51624851
+  sort_code: 58-21-54
 # column: value

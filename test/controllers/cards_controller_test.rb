@@ -37,13 +37,15 @@ class CardsControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "should cancel card" do
-    post cancel_card_url(:one)
-  end
-
   test "should get edit" do
     get edit_card_url(@card)
     assert_response :success
+  end
+
+  test "should not get edit" do
+    sign_out accounts(:one)
+    get edit_card_url(@card)
+    assert_redirected_to new_account_session_path
   end
 
   test "should update card" do
@@ -66,4 +68,13 @@ class CardsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to cards_url
   end
+
+  test "should not destroy card" do
+    sign_out accounts(:one)
+    assert_difference('Card.count', 0) do
+      delete card_url(@card)
+    end
+    assert_redirected_to new_account_session_path
+  end
+
 end

@@ -2,15 +2,20 @@
 
 one:
   account: one
-  payee: one
+  payee: two
+  amount: 2.50
+  reference: MyString
+
+two:
+  account: two
+  payee: two
   amount: 1.5
   reference: MyString
   initial_bal: 1.5
   final_bal: 1.5
 
-two:
+invalid_payee:
   account: two
-  payee: two
   amount: 1.5
   reference: MyString
   initial_bal: 1.5

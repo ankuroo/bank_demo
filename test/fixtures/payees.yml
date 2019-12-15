@@ -6,6 +6,12 @@ one:
   account_no: 94316015
   sort_code: 12-05-84
 
+two:
+  account: one
+  name: Abel Hardy
+  account_no: 98762541
+  sort_code: 51-20-97
+
 invalid_sortcode:
   account: two
   name: Jeremiah Badanbridge

@@ -62,4 +62,12 @@ class PayeesControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to payees_url
   end
+
+  test "should not destroy payee" do
+    sign_out accounts(:one)
+    assert_difference('Payee.count', 0) do
+      delete payee_url(@payee)
+    end
+    assert_redirected_to new_account_session_path
+  end
 end
