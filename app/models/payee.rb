@@ -1,6 +1,7 @@
 class Payee < ApplicationRecord
   # Associations of Payee
   belongs_to :account
+  has_many :transactions
 
   # Validation - These attributes have to be of certain length
   validates :account_no, length: {is: 8}

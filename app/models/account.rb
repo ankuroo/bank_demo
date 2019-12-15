@@ -13,5 +13,5 @@ class Account < ApplicationRecord
   # Associations that an account has
   has_many :cards # An account can have many bank cards
   has_many :payees # An account can have many payees
-
+  has_many :transactions #An account can have many transactions
 end

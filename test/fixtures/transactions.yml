@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  account: one
+  payee: one
+  amount: 1.5
+  reference: MyString
+  initial_bal: 1.5
+  final_bal: 1.5
+
+two:
+  account: two
+  payee: two
+  amount: 1.5
+  reference: MyString
+  initial_bal: 1.5
+  final_bal: 1.5

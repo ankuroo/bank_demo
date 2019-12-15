@@ -1,0 +1,14 @@
+<%# Page to create new transaction %>
+<div class="section">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-4">
+                <h1 class="is-size-1">Transfer</h1>
+
+                <%= render 'form', transaction: @transaction %>
+
+                <%= link_to 'Back', transactions_path %>
+            </div>
+        </div>
+    </div>
+</div>

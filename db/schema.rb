@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_14_165830) do
+ActiveRecord::Schema.define(version: 2019_12_14_223737) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -49,6 +49,19 @@ ActiveRecord::Schema.define(version: 2019_12_14_165830) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["account_id"], name: "index_payees_on_account_id"
+  end
+
+  create_table "transactions", force: :cascade do |t|
+    t.integer "account_id"
+    t.integer "payee_id"
+    t.float "amount"
+    t.string "reference"
+    t.float "initial_bal"
+    t.float "final_bal"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["account_id"], name: "index_transactions_on_account_id"
+    t.index ["payee_id"], name: "index_transactions_on_payee_id"
   end
 
 end

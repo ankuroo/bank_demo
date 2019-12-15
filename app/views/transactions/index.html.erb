@@ -1,0 +1,20 @@
+<%# Page whick displays account transfers and allows to make transfers %>
+<p id="notice"><%= notice %></p>
+
+<div class="section">
+  <div class="container">
+    <div class="level">
+      <div class="level-left">
+        <h1 class="is-size-1">Transactions</h1>
+      </div>
+      <div class="level-right">
+        <%# Button to allow card creation %>
+        <%= link_to 'Transfer', new_transaction_path, class: "button is-primary is-outlined" %>
+      </div>
+    </div>
+    <div class="columns">
+      <%= render 'profile' %>
+      <%= render 'transactions' %>
+    </div>
+  </div>
+</div>

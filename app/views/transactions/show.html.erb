@@ -1,0 +1,34 @@
+<%# Page to display information on transactions %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @transaction.account %>
+</p>
+
+<p>
+  <strong>Payee:</strong>
+  <%= @transaction.payee %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @transaction.amount %>
+</p>
+
+<p>
+  <strong>Reference:</strong>
+  <%= @transaction.reference %>
+</p>
+
+<p>
+  <strong>Initial bal:</strong>
+  <%= @transaction.initial_bal %>
+</p>
+
+<p>
+  <strong>Final bal:</strong>
+  <%= @transaction.final_bal %>
+</p>
+
+<%= link_to 'Back', transactions_path %>

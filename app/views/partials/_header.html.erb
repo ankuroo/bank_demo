@@ -3,7 +3,11 @@
   <div class="container">
     <div class="navbar-brand">
       <div class="navbar-item">
-        <%= link_to "CSB", root_path, class:"has-text-weight-bold is-size-1 is-italic has-text-primary is-inverted"%>
+        <% if !account_signed_in? %>
+        <%= link_to "CSB", root_path, class:"has-text-weight-bold is-size-1 is-italic has-text-primary is-inverted" %>
+        <% else %>
+        <%= link_to "CSB", transactions_path, class:"has-text-weight-bold is-size-1 is-italic has-text-primary is-inverted" %>
+        <% end %>
       </div>
 
       <% if account_signed_in? %>

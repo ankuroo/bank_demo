@@ -1,0 +1,23 @@
+<%# Form to allow a user to transfer money %>
+<%= simple_form_for(@transaction) do |f| %>
+<%= f.error_notification %>
+<%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+<div class="form-inputs">
+
+  <ul>
+    <% @transaction.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+  Payee
+  <%# Selection option so user can select a payee %>
+  <%= f.collection_select :payee_id, Payee.where(account_id: current_account.id), :id, :name, include_blank: true %>
+  <%= f.input :amount, wrapper: false, input_html: {class: "input"} %>
+  <%= f.input :reference, wrapper: false, input_html: {class: "input"} %>
+</div>
+
+<div class="form-actions">
+  <%= f.button :submit, class: "button is-primary" %>
+</div>
+<% end %>
