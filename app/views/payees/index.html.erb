@@ -8,7 +8,7 @@
       </div>
       <div class="level-right">
         <%# Button to allow card creation %>
-        <%= link_to 'New Card', new_payee_path, class: "button is-primary is-outlined" %>
+        <%= link_to 'New Payee', new_payee_path, class: "button is-primary is-outlined" %>
       </div>
     </div>
 
@@ -37,6 +37,11 @@
             <div class="content">
               <p class="is-size-6">Sort Code</p>
               <%= payee.sort_code%>
+            </div>
+          </div>
+          <div class="level-right">
+            <div class="content">
+              <%= link_to "Transactions", payee_path(payee), class: "button is-primary is-inverted"%>
             </div>
           </div>
           <div class="level-right">

@@ -10,6 +10,11 @@ class PayeesController < ApplicationController
     @payees = Payee.where(account_id:  current_account.id)
   end
 
+  # Show action, displays transactions belonging to the payee
+  def show
+    @transactions = @payee.transactions.order("created_at DESC")
+  end
+
   # GET /payees/new
   def new
     @payee = current_account.payees.build

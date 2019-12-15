@@ -29,6 +29,21 @@ class PayeesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  # Checks if user can access payee information
+  # Should open payee info page
+  test "should get show" do
+    get payee_url(@payee)
+    assert :success
+  end
+
+  # Checks if payee information opens when no active session
+  # Should redirect to log in page
+  test "should not get edit" do
+    sign_out accounts(:one)
+    get payee_url(@payee)
+    assert_redirected_to new_account_session_path
+  end
+
   # Checks if new payee page can be accessed without active session
   # Should redirect to sign in page
   test "should not get new" do
@@ -85,7 +100,7 @@ class PayeesControllerTest < ActionDispatch::IntegrationTest
 
   # Checks if payee can be updated with invalid sort code
   # Should not update payee and remain on page
-  test "should not update invalid_sortcode payee" do
+  test "should not update invalid sortcode payee" do
   @payee = payees(:invalid_sortcode)
     patch payee_url(@payee), params: { payee: { account_id: @payee.account_id, account_no: @payee.account_no, name: @payee.name, sort_code: @payee.sort_code } }
     assert_response :success
