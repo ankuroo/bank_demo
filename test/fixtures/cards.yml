@@ -1,5 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
+# Cards to populate cards table in test environment
+
+# Valid Card
 one:
   account: one
   card_no: "5421598763215486"
@@ -8,6 +11,7 @@ one:
   pin: "4125"
   status: true
 
+# Below are all invalid cards
 invalid_cvv:
   account: one
   card_no: 1234598763215486
@@ -23,3 +27,11 @@ invalid_pin:
     cvv: 921
     pin: 153
     status: true
+
+invalid_card_no:
+  account: one
+  card_no: 49519132762151
+  expiry_date:  2022-12-15
+  cvv: 221
+  pin: 4351
+  status: true

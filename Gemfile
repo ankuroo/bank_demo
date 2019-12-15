@@ -50,6 +50,8 @@ gem 'devise', '~> 4.7', '>= 4.7.1'
 # JQuery
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 
+gem 'rails-controller-testing'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 

@@ -1,5 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
+# Transactions to populate transaction table in test environment
+
+# 'one' and 'two' are both valid transactions
 one:
   account: one
   payee: two
@@ -14,9 +17,17 @@ two:
   initial_bal: 1.5
   final_bal: 1.5
 
+# Below are all invalid transactions
 invalid_payee:
   account: two
   amount: 1.5
   reference: MyString
   initial_bal: 1.5
   final_bal: 1.5
+
+invalid_amount:
+  account: two
+  amount: -2
+  reference: Reference is fine
+  initial_bal: 50.25
+  final_bal: 52.25

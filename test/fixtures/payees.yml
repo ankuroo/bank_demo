@@ -1,19 +1,31 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
+# Payees to populate payees table in test environment
+
+# 'one' and 'two' are both valid payees
+# 'one' is used in payees testing
 one:
   account: one
   name: Cain Cavanagh
   account_no: 94316015
   sort_code: 12-05-84
 
+# 'two' is used in transaction testing
 two:
   account: one
   name: Abel Hardy
   account_no: 98762541
   sort_code: 51-20-97
 
+# Below are all invalid payees
 invalid_sortcode:
   account: two
   name: Jeremiah Badanbridge
   account_no: 24159015
+  sort_code: 1-52-15
+
+invalid_account_no:
+  account: two
+  name: Lilith Reinhart
+  account_no: 241590125
   sort_code: 1-52-15

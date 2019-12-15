@@ -4,6 +4,10 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
+
+# Accounts to populate accounts table in test environment
+
+# Valid Account
 one:
   email: "am02412@surrey.ac.uk"
   encrypted_password: <%= Account.new.send(:password_digest, '123456')%>
@@ -13,8 +17,7 @@ one:
   account_no: "12072000"
   sort_code: "20-00-02"
 
-# column: value
-#
+# Below are all invalid accounts
 invalid_email:
   name: John Smith
   encrypted_password: <%= Account.new.send(:password_digest, '123456')%>
@@ -23,4 +26,21 @@ invalid_email:
   balance: 500.00
   account_no: 51624851
   sort_code: 58-21-54
-# column: value
+
+invalid_account_no:
+  name: Delilah Poulet
+  encrypted_password: <%= Account.new.send(:password_digest, '123456')%>
+  username: dpoulet
+  email: dpoulet@email.com
+  balance: 500.00
+  account_no: 516234522
+  sort_code: 58-21-54
+
+invalid_sortcode:
+  name: Wade Wilson
+  encrypted_password: <%= Account.new.send(:password_digest, '123456')%>
+  username: dpool@logansplace.com
+  email: yourmom
+  balance: 500.00
+  account_no: 51624851
+  sort_code: 58-21-254
