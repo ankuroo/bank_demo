@@ -7,7 +7,7 @@ In order to be able to run this app, please ensure you have the following softwa
 
 **Ruby version:** 2.6.3
 
-**Bundler version** 2.0.2
+**Bundler version** 1.16.1
 
 ## Setting up the Site
 In order to run the site, you must first set it up.

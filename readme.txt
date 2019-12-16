@@ -3,7 +3,7 @@ README
 For this coursework, I have used the following versions:
  - Rails version 5.2.3
  - Ruby version 2.6.3
- - Bundler version 2.0.2
+ - Bundler version 1.16.1
 
  Development Environment
 ==============================
