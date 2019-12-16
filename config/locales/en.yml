@@ -60,9 +60,7 @@ en:
                 Do NOT use the account details (Account No, Sort-Code or CVC) provided by CSB to make
                 any real-world purchases on any site outside of this one. These transactions will not go through. <br>
                 Do NOT list your CBS card details anywhere.
-
   # Holds text for contact page
-  contacts:
-    new:
+    contact:
       title: Contact Us
 

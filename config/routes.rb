@@ -17,11 +17,10 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  # Routes all paths in contact to a single route
-  match '/contact',     to: 'contacts#new',             via: 'get'
-
-  # Creates paths for selected resources in contacts controller
-  resources "contacts", only: [:new, :create]
+  # Routes contact path in static controller to '/contact'
+  get 'contact',     to: 'static#contact'
+  # Creates path for action in static controller
+  post 'request_contact', to: 'static#request_contact'
 
   # Sets root path for the site, establishing the landing page
   root "static#home"

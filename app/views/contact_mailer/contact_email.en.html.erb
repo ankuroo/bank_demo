@@ -1,0 +1,23 @@
+<%# Preview for the email %>
+<p>
+  Dear admin,
+</p>
+<p>
+  <%= "Could you get in touch with me please?" %>
+</p>
+
+<dl>
+  <dd>
+    <strong>Name:</strong> <%= @name %>
+  </dd>
+  <dd>
+    <strong>Email: </strong> <%= @email %>
+  </dd>
+  <p>
+    <%= @message %>
+  </p>
+  <p>Regards,</p>
+  <p>
+    <%= @name %>
+  </p>
+</dl>
