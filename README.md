@@ -2,9 +2,13 @@
 This is my COM2025 coursework project. I have made a bank application which allows users to create, cards, payees and transactions.
 ## System Specification
 In order to be able to run this app, please ensure you have the following software, with the same versions.
+
 **Rails version:** 5.2.3
+
 **Ruby version:** 2.6.3
+
 **Bundler version** 2.0.2
+
 ## Setting up the Site
 In order to run the site, you must first set it up.
 ### Development Environment
@@ -20,7 +24,7 @@ To set up the testing environment, whils in the root directory of the app, run t
     rails db:migrate RAILS_ENV=test
 Once all the migrations have been run, use the following command to run the tests:
 
-    rake routes
+    rake test
 ## Using the site (Important)
 Many features of the site will be closed unavailable, when the user is not logged in.
 
