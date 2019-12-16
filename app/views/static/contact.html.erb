@@ -6,25 +6,18 @@
                 <h1 class="is-size-1"><%= t(".title") %></h1>
 
                 <%# Form to render for contact form. Simple form with inputs for name, email, and message. %>
-                <%= simple_form_for :contact, url: request_contact_path, method:"post" do |f| %>
-                <div class="form-inputs">
-                    <div class="field">
-                        <div class="control">
-                            <%= f.input :name, input_html: {class: 'input'}, wrapper: false, label_html: {class: 'label'} %>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="control">
-                            <%= f.input :email, input_html: {class: 'input'}, wrapper: false, label_html: {class: 'label'} %>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="control">
-                            <%= f.input :message, input_html: {class: 'textarea'}, wrapper: false, label_html: {class: 'label'} %>
-                        </div>
-                    </div>
-                </div>
-                <%= f.button :submit, "Send", class: "button is-primary" =%>
+                <%= form_tag request_contact_path, method: 'post' do %>
+                <%= label_tag :name, "Name: " %>
+                <%= text_field_tag :name, '', title: "Enter your name", size: 25 %>
+
+                <%= label_tag :email, "Email: " %>
+                <%= email_field_tag :email, '', title: t('.enter_email') %>
+
+                <%= label_tag :message, t('.message') %>
+                <%= text_field_tag :message, '', title: t('.enter_message'), size: 100 %>
+
+
+                <%= submit_tag t('.submit') %>
                 <% end %>
             </div>
         </div>

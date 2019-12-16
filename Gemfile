@@ -38,9 +38,6 @@ gem 'better_errors', '~> 2.5', '>= 2.5.1'
 # Bulma
 gem 'bulma-rails', '~> 0.8.0'
 
-# MailForm
-gem 'mail_form', '~> 1.8'
-
 # Simple Forms
 gem 'simple_form', '~> 5.0', '>= 5.0.1'
 
