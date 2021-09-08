@@ -33,7 +33,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # Beautify errors
-gem 'better_errors', '~> 2.5', '>= 2.5.1'
+gem 'better_errors', '~> 2.8'
 
 # Bulma
 gem 'bulma-rails', '~> 0.8.0'
